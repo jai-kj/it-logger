@@ -6,5 +6,7 @@ CRUD operations can be performed on Logs as well as Technicians.
 Version 1.0.0
 
 Frontend Tech: React, Redux
+
 Backend Tech: NodeJs, Express
+
 Database: MongoDB Atlas
