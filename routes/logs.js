@@ -8,7 +8,7 @@ const Log = require('../models/Log')
 //@access Public
 router.get('/', async (req, res) => {
   try {
-    const logs = await Log.find().sort({ date: -1 })
+    const logs = await Log.find()
     res.json(logs)
   } catch (err) {
     console.error(err.message)
@@ -46,9 +46,9 @@ router.put('/:id', async (req, res) => {
   const logFields = {}
   if(tech) logFields.tech = tech
   if(message) logFields.message = message
-  if(attention) logFields.attention = attention
-  if(date) logFields.date = date
-
+  logFields.attention = attention
+  logFields.date = date
+  
   try {
     let log = await Log.findById(req.params.id)
     

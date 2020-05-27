@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.delete-trash{
+  color: grey
+}
+
+.delete-trash:hover{
+  color: black;
+}
